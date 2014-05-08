@@ -17,10 +17,14 @@ void loop() {
    Serial.println(voltage);
  }
  spinSpeed = val / 4;
- if(spinSpeed < 10) {
-   spinSpeed = 150;
+ 
+ // THIS IS ADDED FOR DEMO PURPOSES
+ if(spinSpeed == 0) {
+   spinSpeed = 0;
  } else {
-   spinSpeed = 175;
+   spinSpeed = 80;
  }
+ // END OF DEMO PART OF CODE
+ 
  analogWrite(spinPin, spinSpeed);
 }
